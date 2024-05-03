@@ -370,6 +370,12 @@ def neocp_confirmation_menu(config):
     -------
 
     """
+    
+    select_choice = input(_("Do you want to know the asteroid's ephemeris? [y/N]"))
+    if select_choice == "s" or select_choice == "y":
+       neocp = scheduling.neocp_confirmation(config, min_score, max_magnitude) 
+    else:
+        
     min_score = get_integer(_("Minimum score -> "))
     max_magnitude = get_float(_("Maximum magnitude -> "))
     browser_view = input(_("Do you want to view in Browser? (y/N) -> "))
